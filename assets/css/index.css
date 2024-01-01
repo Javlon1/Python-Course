@@ -637,3 +637,67 @@ img {
         font-size: 12px;
     }
 }
+
+
+.faq-container {
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.question {
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.answer {
+    display: none;
+    margin-bottom: 20px;
+}
+
+
+/*  */
+.carousel-container {
+    max-width: 800px;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 25%; /* Отображение 4 слайдов одновременно */
+    box-sizing: border-box;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.prev {
+    left: 10px;
+    z-index: 2;
+}
+
+.next {
+    right: 10px;
+    z-index: 2;
+}

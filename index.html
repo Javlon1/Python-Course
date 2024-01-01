@@ -159,6 +159,43 @@
         </section>
         <!-- Experience End -->
 
+        <!-- Сarousel Start -->
+
+        <div class="carousel-container">
+            <button class="carousel-button prev" onclick="prevSlide()">&#9665;</button>
+            <div class="carousel" onmousedown="startSwipe(event)" ontouchstart="startSwipe(event)">
+                <div class="carousel-item"><img src="./assets/image/fire.svg" alt="Slide 1"></div>
+                <div class="carousel-item"><img src="./assets/image/fire.svg" alt="Slide 2"></div>
+                <div class="carousel-item"><img src="./assets/image/fire.svg" alt="Slide 3"></div>
+                <div class="carousel-item"><img src="./assets/image/fire.svg" alt="Slide 1"></div>
+                <div class="carousel-item"><img src="./assets/image/fire.svg" alt="Slide 2"></div>
+                <div class="carousel-item"><img src="./assets/image/fire.svg" alt="Slide 3"></div>
+                <div class="carousel-item"><img src="./assets/image/fire.svg" alt="Slide 1"></div>
+                <div class="carousel-item"><img src="./assets/image/fire.svg" alt="Slide 2"></div>
+                <div class="carousel-item"><img src="./assets/image/fire.svg" alt="Slide 3"></div>
+                <div class="carousel-item"><img src="./assets/image/fire.svg" alt="Slide 1"></div>
+                <div class="carousel-item"><img src="./assets/image/fire.svg" alt="Slide 2"></div>
+                <div class="carousel-item"><img src="./assets/image/fire.svg" alt="Slide 3"></div>
+                <!-- Add more slides as needed -->
+            </div>
+            <button class="carousel-button next" onclick="nextSlide()">&#9655;</button>
+        </div>
+        <!-- Сarousel End -->
+
+        <!-- Faq Start -->
+
+        <div class="faq-container">
+            <div class="question" onclick="toggleAnswer('q1')">Q: What is FAQ?</div>
+            <div class="answer" id="q1">A: FAQ stands for "Frequently Asked Questions." It is a compilation of common
+                questions and their answers.</div>
+
+            <div class="question" onclick="toggleAnswer('q2')">Q: How can I submit a question?</div>
+            <div class="answer" id="q2">A: You can submit a question through our contact form on the website or by
+                reaching out to our support team.</div>
+
+            <!-- Add more questions and answers as needed -->
+        </div>
+        <!-- Faq end -->
         <!-- Scroll Up Start -->
         <div id="scrollUp" class="scrollUp">
             <span>&uarr;</span>
