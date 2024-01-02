@@ -183,6 +183,13 @@ img {
     color: var(--white);
 }
 
+
+@media only screen and (max-width: 400px){
+    .header .header__nav{
+        justify-content: center;
+    }
+}
+
 .intro {
     margin-top: 100px;
 }
@@ -810,6 +817,11 @@ img {
         flex-direction: column;
     }
 
+    .experts__title {
+        margin: 25px 0;
+        font-size: 25px;
+    }
+
     .experts__items__left {
         width: 100%;
         padding: 20px;
@@ -831,6 +843,10 @@ img {
 }
 
 @media only screen and (max-width: 575px) {
+    .experts__title {
+        margin: 20px 0;
+        font-size: 20px;
+    }
 
     .experts__items__left ul li img {
         width: 90%;
