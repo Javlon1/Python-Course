@@ -1467,6 +1467,14 @@ img {
     font-weight: 400;
 }
 
+.faq .faq__items .faq__items__question p b {
+    font-weight: 400;
+}
+
+.faq .faq__items .faq__items__question p .minus {
+    display: none;
+}
+
 .faq .faq__items .faq__items__answer {
     display: block;
     width: 100%;
@@ -1482,6 +1490,14 @@ img {
     padding: 10px 0;
     height: auto !important;
 }
+
+.faqActP .plus{
+    display: none !important;
+}
+.faqActP .minus{
+    display: block !important;
+}
+
 
 @media only screen and (max-width: 991px) {
     .faq .faq__title {

@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
 // Faq Start
 function toggleAnswer(id) {
     const answer = document.getElementById(id);
+    const p = document.getElementById(`p-${id}`);
     answer.classList.toggle('faqAct');
+    p.classList.toggle('faqActP');
 }
 // Faq End
