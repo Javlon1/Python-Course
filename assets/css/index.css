@@ -1424,6 +1424,10 @@ input:not(:placeholder-shown)+.placeholder {
     .curriculum__items__title {
         width: 100%;
     }
+
+    .curriculum__items__list__title {
+        margin: 20px 0;
+    }
 }
 
 
