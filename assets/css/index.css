@@ -1397,17 +1397,17 @@ input:not(:placeholder-shown)+.placeholder {
     transition: all .5s ease;
 }
 
-.actdsadsa {
-    padding: 20px 0;
+.aqardion {
+    padding: 10px 0;
     opacity: 1 !important;
     height: auto !important;
 }
 
-.actdsadsa .plus {
+.aqardion .plus {
     display: none;
 }
 
-.actdsadsa .minus {
+.aqardion .minus {
     display: block !important;
 }
 

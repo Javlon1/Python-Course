@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
 function aqardion(id) {
     const aqardion = document.getElementById(id);
     const a = document.getElementById(`a-${id}`);
-    aqardion.classList.toggle('actdsadsa');
-    a.classList.toggle('actdsadsa');
+    aqardion.classList.toggle('aqardion');
+    a.classList.toggle('aqardion');
 }
 // Aqardion End
 
