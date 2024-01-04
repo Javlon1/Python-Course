@@ -12,7 +12,7 @@
     --border-radius: 20px;
     --font-size-title: 40px;
     --font-size-content-title: 25px;
-    --font-size-subtitle: 20px;
+    --font-size-subtitle: 18px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -752,13 +752,13 @@ img {
 
 .process .process__list {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .process__list__item {
     width: 30%;
+    height: 444px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -811,7 +811,6 @@ img {
 
 .process__list__div {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
@@ -840,8 +839,9 @@ img {
         gap: 30px;
     }
 
-    .process .process__list .process__list__item {
+    .process__list__item {
         width: 100%;
+        height: auto;
     }
 
     .process__list__div {
@@ -951,7 +951,6 @@ img {
 
 .portfolio__list {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     gap: 20px;
 }
@@ -973,10 +972,6 @@ img {
     font-weight: 500;
     color: var(--black);
     padding: 5px 20px 10px;
-}
-
-.portfolio__list__item p i {
-    color: var(--white);
 }
 
 @media only screen and (max-width: 1199px) {
@@ -1292,6 +1287,156 @@ input:not(:placeholder-shown)+.placeholder {
     }
 }
 
+.curriculum__title {
+    margin: 40px 0;
+    font-size: var(--font-size-title);
+    font-weight: 700;
+    color: var(--black);
+}
+
+.curriculum__list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.curriculum__list li {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 12px 24px;
+    font-size: var(--font-size-subtitle);
+}
+
+.curriculum__items {
+    margin-top: 2rem;
+    background-color: var(--white);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+}
+
+.curriculum__items h3 {
+    font-size: var(--font-size-content-title);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.curriculum__items h3 i {
+    border-radius: .5rem;
+    background-color: #8D46F6;
+    width: 4px;
+    height: 19.8px;
+    border-radius: 8px;
+}
+
+.curriculum__items__title {
+    width: 70%;
+    margin: 30px 0;
+    font-size: var(--font-size-subtitle);
+    font-weight: 500;
+    color: var(--black);
+}
+
+.curriculum__items__list {
+    background-color: var(--gray);
+    padding: 10px;
+    border-radius: var(--border-radius);
+}
+
+.curriculum__items__list__title {
+    margin: 30px 0;
+    font-weight: 500;
+    font-size: var(--font-size-subtitle);
+}
+
+.curriculum__items__list__div {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.curriculum__items__list__div__question {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 10px var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.curriculum__items__list__div__question .question {
+    width: 90%;
+    font-size: var(--font-size-subtitle);
+    font-weight: 500;
+}
+
+.curriculum__items__list__div__question .p {
+    width: 40px;
+    height: 40px !important;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray);
+}
+
+.curriculum__items__list__div__question .p .minus {
+    display: none;
+}
+
+.curriculum__items__list__div__answer {
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    padding-left: 20px !important;
+    background-color: var(--gray);
+    font-size: var(--font-size-subtitle);
+    transition: all .5s ease;
+}
+
+.actdsadsa {
+    padding: 20px 0;
+    opacity: 1 !important;
+    height: auto !important;
+}
+
+.actdsadsa .plus {
+    display: none;
+}
+
+.actdsadsa .minus {
+    display: block !important;
+}
+
+@media only screen and (max-width: 991px) {
+    .curriculum__list {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .curriculum__list li {
+        padding: 8px 16px;
+    }
+
+    .curriculum__items__title {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1378,8 +1523,8 @@ input:not(:placeholder-shown)+.placeholder {
 }
 
 .faqAct {
-    opacity: 1 !important;
     padding: 10px 0;
+    opacity: 1 !important;
     height: auto !important;
 }
 

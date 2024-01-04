@@ -29,6 +29,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // slider end
 
+// Aqardion Start
+function aqardion(id) {
+    const aqardion = document.getElementById(id);
+    const a = document.getElementById(`a-${id}`);
+    aqardion.classList.toggle('actdsadsa');
+    a.classList.toggle('actdsadsa');
+}
+// Aqardion End
 
 // Faq Start
 function toggleAnswer(id) {
