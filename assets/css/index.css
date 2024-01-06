@@ -1466,7 +1466,31 @@ input:not(:placeholder-shown)+.placeholder {
     width: 45%;
 }
 
-.mentors__items__left__list__item img {
+.mentors__items__left__list__item div {
+    cursor: pointer;
+    position: relative;
+    border-radius: var(--border-radius);
+}
+
+.mentors__items__left__list__item div .op {
+    background-color: var(--black);
+    position: absolute;
+    width: 100%;
+    height: 98.5%;
+    z-index: 2;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.opact {
+    opacity: .6 !important;
+}
+
+.modalAct {
+    display: none !important;
+}
+
+.mentors__items__left__list__item div img {
     width: 100%;
     height: 350px;
     border-radius: var(--border-radius);
@@ -1617,7 +1641,7 @@ input:not(:placeholder-shown)+.placeholder {
 }
 
 @media only screen and (max-width: 991px) {
-    .mentors__items__left__list__item img {
+    .mentors__items__left__list__item div img {
         height: auto;
     }
 
@@ -1662,13 +1686,65 @@ input:not(:placeholder-shown)+.placeholder {
     }
 }
 
+.carousel__title {
+    margin: 40px 0;
+    font-size: var(--font-size-title);
+    font-weight: 700;
+    color: var(--black);
+}
 
+.carousel__list {
+    width: 100%;
+    height: auto;
+    background-color: var(--white);
+    padding: 20px 10px;
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+}
 
+.carousel__list__item {
+    overflow: hidden;
+    background-color: var(--gray);
+    min-width: 268px;
+    height: 426px;
+    border-radius: var(--border-radius);
+    position: relative;
+}
 
+.carousel__list__item button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: var(--white);
+}
 
+.carousel__list__item p {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: var(--white);
+    font-size: var(--font-size-subtitle);
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+}
 
+@media only screen and (max-width: 991px) {
+    .carousel__title {
+        margin: 25px 0;
+    }
+}
 
-
+@media only screen and (max-width: 575px) {
+    .carousel__title {
+        margin: 20px 0;
+    }
+}
 
 
 
