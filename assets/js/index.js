@@ -123,20 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
         touchEndX = event.touches[0].clientX;
     }
 
-    function handleTouchEnd() {
-        const touchDelta = touchEndX - touchStartX;
-
-        if (Math.abs(touchDelta) > 50) {
-            if (touchDelta > 0) {
-                prevSlide();
-            } else {
-                nextSlide();
-            }
-        }
-
-        shouldContinueScrolling = true;
-    }
-
     initializeCarousel();
 
     carouselContainer.addEventListener('mouseenter', () => {
@@ -149,7 +135,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     carouselContainer.addEventListener('touchstart', handleTouchStart);
     carouselContainer.addEventListener('touchmove', handleTouchMove);
-    carouselContainer.addEventListener('touchend', handleTouchEnd);
 });
 // 
 
