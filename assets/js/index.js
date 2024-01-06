@@ -59,13 +59,12 @@ function mentorsModal(id) {
 
 
 // slider start
-
 document.addEventListener('DOMContentLoaded', function () {
-    var mySwiper = new Swiper('.swiper-container', {
+    var swiperInstance = new Swiper('.swiper-container', {
         slidesPerView: 1,
         spaceBetween: 10,
         autoplay: {
-            delay: 5000,
+            delay: 2000,
             disableOnInteraction: false,
         },
         breakpoints: {
@@ -73,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 slidesPerView: 1,
                 spaceBetween: 20,
             },
-            400:{
+            400: {
                 slidesPerView: 2,
                 spaceBetween: 20,
             },
@@ -96,19 +95,30 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
 function playPause(videoId) {
     var video = document.getElementById(videoId);
+
     if (video) {
+        var allVideos = document.getElementsByTagName('video');
+        for (var i = 0; i < allVideos.length; i++) {
+            if (allVideos[i] !== video && !allVideos[i].paused) {
+                allVideos[i].pause();
+            }
+        }
+
         if (video.paused) {
             video.play();
+            // swiperInstance.autoplay.stop();
         } else {
             video.pause();
+            // swiperInstance.autoplay.start();
         }
     } else {
         console.error("Элемент с id '" + videoId + "' не найден");
     }
 }
+
+
 
 // slider end
 

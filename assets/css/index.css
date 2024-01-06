@@ -1712,13 +1712,12 @@ input:not(:placeholder-shown)+.placeholder {
 .carousel__list__item {
     background-color: var(--gray);
     border-radius: var(--border-radius);
-    height: 426px;
     position: relative;
 }
 
 .video {
     width: 100%;
-    height: 426px;
+    height: 400px;
 }
 
 .carousel__list__item button {
@@ -1755,8 +1754,55 @@ input:not(:placeholder-shown)+.placeholder {
     }
 }
 
+.overview__title {
+    margin: 40px 0;
+    font-size: var(--font-size-title);
+    font-weight: 700;
+    color: var(--black);
+    width: 80%;
+}
 
+.overview__list {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
+.overview__list__item {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    width: 23%;
+    overflow: hidden;
+}
+
+.overview__list__item img {
+    width: 100%;
+    height: 200px;
+    border-radius: var(--border-radius);
+}
+
+.overview__list__item p {
+    padding: var(--padding);
+    font-size: var(--font-size-subtitle);
+}
+
+@media only screen and (max-width: 1199px) {
+    .overview__list__item {
+        width: 280px;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .overview__list__item {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .overview__list__item {
+        width: 100%;
+    }
+}
 
 
 
