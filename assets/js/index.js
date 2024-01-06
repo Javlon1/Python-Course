@@ -59,81 +59,44 @@ function mentorsModal(id) {
 
 
 // slider start
-//
-document.addEventListener("DOMContentLoaded", function () {
-    const carouselContainer = document.getElementById('carouselContainer');
-    const items = document.querySelectorAll('.carousel__list__item');
-    const totalItems = items.length;
 
-    let currentIndex = 1;
-    let isMouseOverCarousel = false;
-    let touchStartX = 0;
-    let touchEndX = 0;
-    let shouldContinueScrolling = true;
-
-    function showSlide(index) {
-        const offset = -index * 288;
-        carouselContainer.style.transform = `translateX(${offset}px)`;
-    }
-
-    function initializeCarousel() {
-        showSlide(currentIndex);
-
-        setInterval(() => {
-            if (!isMouseOverCarousel && shouldContinueScrolling) {
-                nextSlide();
-            }
-        }, 6000);
-    }
-
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-        showSlide(currentIndex);
-    }
-
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % totalItems;
-        showSlide(currentIndex);
-    }
-
-    function handleTouchStart(event) {
-        touchStartX = event.touches[0].clientX;
-        shouldContinueScrolling = false;
-    }
-
-    function handleTouchMove(event) {
-        touchEndX = event.touches[0].clientX;
-        const touchDelta = touchEndX - touchStartX;
-
-        if (Math.abs(touchDelta) > 50) {
-            if (touchDelta > 0) {
-                prevSlide();
-            } else {
-                nextSlide();
-            }
-            event.preventDefault();
+document.addEventListener('DOMContentLoaded', function () {
+    var mySwiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            400: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            750: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1000: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+            1300: {
+                slidesPerView: 5,
+                spaceBetween: 20,
+            },
+            1350: {
+                slidesPerView: 7,
+                spaceBetween: 20,
+            },
         }
-
-        shouldContinueScrolling = true;
-    }
-
-    initializeCarousel();
-
-    carouselContainer.addEventListener('mouseenter', () => {
-        isMouseOverCarousel = true;
     });
-
-    carouselContainer.addEventListener('mouseleave', () => {
-        isMouseOverCarousel = false;
-    });
-
-    carouselContainer.addEventListener('touchstart', handleTouchStart);
-    carouselContainer.addEventListener('touchmove', handleTouchMove);
 });
 
-// 
-
-//
 function playPause(videoId) {
     var video = document.getElementById(videoId);
     if (video) {
@@ -146,7 +109,7 @@ function playPause(videoId) {
         console.error("Элемент с id '" + videoId + "' не найден");
     }
 }
-// 
+
 // slider end
 
 

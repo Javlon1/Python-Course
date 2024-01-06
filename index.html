@@ -18,6 +18,8 @@
 
     <!-- All css -->
     <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <title>Python - Course</title>
 </head>
 
@@ -89,7 +91,8 @@
                         <h2>2023-yilda Eng yuqori talabga ega til</h2>
                         <span>
                             <p>TIOBE reytingiga ko’ra</p>
-                            <p>Python orqali Netflix, Google, YouTube va DropBox kabi katta kompaniyalar saytlar va ilovalar yozishadi</p>
+                            <p>Python orqali Netflix, Google, YouTube va DropBox kabi katta kompaniyalar saytlar va
+                                ilovalar yozishadi</p>
                         </span>
                     </div>
                     <div class="information__items__right">
@@ -213,7 +216,8 @@
                                 <b>2</b>
                             </div>
                             <p class="process__list__item__text">
-                                Har haftada asosiy mentorlarimiz bilan code-reviewlar, o’quv metodikasi bo’yicha uy topshiriqlaringizni tekshirtirib olishingiz va savollaringizga javob olishingiz mumkin.
+                                Har haftada asosiy mentorlarimiz bilan code-reviewlar, o’quv metodikasi bo’yicha uy
+                                topshiriqlaringizni tekshirtirib olishingiz va savollaringizga javob olishingiz mumkin.
                             </p>
                         </li>
                         <li class="process__list__div__item">
@@ -823,94 +827,99 @@
             <div class="myContainer">
                 <h2 class="carousel__title">Bizni shogirdlarimiz nima deydi?</h2>
             </div>
-            <ul class="carousel__list">
-                <div id="carouselContainer">
-                    <li class="carousel__list__item">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide carousel__list__item">
                         <button onclick="playPause('video1')">
                             <img src="./assets/image/playPause.png" alt="">
                         </button>
-
-                        <video id="video1" width="268" height="426">
+                        <video id="video1" class="video">
                             <source src="./assets/image/video.mp4" type="video/mp4">
                             Ваш браузер не поддерживает тег video.
                         </video>
+                        <p>Alisher G’aniyev1</p>
+                    </div>
 
-                        <p>Alisher G’aniyev</p>
-                    </li>
-                    <li class="carousel__list__item">
+                    <div class="swiper-slide carousel__list__item">
                         <button onclick="playPause('video2')">
                             <img src="./assets/image/playPause.png" alt="">
                         </button>
-
-                        <video id="video2" width="268" height="426">
-                            <source src="./assets/image/video.webm" type="video/mp4">
-                            Ваш браузер не поддерживает тег video.
-                        </video>
-
-                        <p>Alisher G’aniyev</p>
-                    </li>
-                    <li class="carousel__list__item">
-                        <button onclick="playPause('video1')">
-                            <img src="./assets/image/playPause.png" alt="">
-                        </button>
-
-                        <video id="video1" width="268" height="426">
+                        <video id="video2" class="video">
                             <source src="./assets/image/video.mp4" type="video/mp4">
                             Ваш браузер не поддерживает тег video.
                         </video>
+                        <p>Alisher G’aniyev2</p>
+                    </div>
 
-                        <p>Alisher G’aniyev</p>
-                    </li>
-                    <li class="carousel__list__item">
-                        <button onclick="playPause('video2')">
+                    <div class="swiper-slide carousel__list__item">
+                        <button onclick="playPause('video3')">
                             <img src="./assets/image/playPause.png" alt="">
                         </button>
-
-                        <video id="video2" width="268" height="426">
-                            <source src="./assets/image/video.webm" type="video/mp4">
-                            Ваш браузер не поддерживает тег video.
-                        </video>
-
-                        <p>Alisher G’aniyev</p>
-                    </li>
-                    <li class="carousel__list__item">
-                        <button onclick="playPause('video1')">
-                            <img src="./assets/image/playPause.png" alt="">
-                        </button>
-
-                        <video id="video1" width="268" height="426">
+                        <video id="video3" class="video">
                             <source src="./assets/image/video.mp4" type="video/mp4">
                             Ваш браузер не поддерживает тег video.
                         </video>
+                        <p>Alisher G’aniyev3</p>
+                    </div>
 
-                        <p>Alisher G’aniyev</p>
-                    </li>
-                    <li class="carousel__list__item">
-                        <button onclick="playPause('video2')">
+                    <div class="swiper-slide carousel__list__item">
+                        <button onclick="playPause('video4')">
                             <img src="./assets/image/playPause.png" alt="">
                         </button>
-
-                        <video id="video2" width="268" height="426">
-                            <source src="./assets/image/video.webm" type="video/mp4">
-                            Ваш браузер не поддерживает тег video.
-                        </video>
-
-                        <p>Alisher G’aniyev</p>
-                    </li>
-                    <li class="carousel__list__item">
-                        <button onclick="playPause('video10')">
-                            <img src="./assets/image/playPause.png" alt="">
-                        </button>
-
-                        <video id="video1" width="268" height="426">
+                        <video id="video4" class="video">
                             <source src="./assets/image/video.mp4" type="video/mp4">
                             Ваш браузер не поддерживает тег video.
                         </video>
+                        <p>Alisher G’aniyev4</p>
+                    </div>
 
-                        <p>Alisher G’aniyev 10</p>
-                    </li>
+                    <div class="swiper-slide carousel__list__item">
+                        <button onclick="playPause('video5')">
+                            <img src="./assets/image/playPause.png" alt="">
+                        </button>
+                        <video id="video5" class="video">
+                            <source src="./assets/image/video.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает тег video.
+                        </video>
+                        <p>Alisher G’aniyev5</p>
+                    </div>
+
+                    <div class="swiper-slide carousel__list__item">
+                        <button onclick="playPause('video6')">
+                            <img src="./assets/image/playPause.png" alt="">
+                        </button>
+                        <video id="video6" class="video">
+                            <source src="./assets/image/video.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает тег video.
+                        </video>
+                        <p>Alisher G’aniyev6</p>
+                    </div>
+
+                    <div class="swiper-slide carousel__list__item">
+                        <button onclick="playPause('video7')">
+                            <img src="./assets/image/playPause.png" alt="">
+                        </button>
+                        <video id="video7" class="video">
+                            <source src="./assets/image/video.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает тег video.
+                        </video>
+                        <p>Alisher G’aniyev7</p>
+                    </div>
+
+                    <div class="swiper-slide carousel__list__item">
+                        <button onclick="playPause('video8')">
+                            <img src="./assets/image/playPause.png" alt="">
+                        </button>
+                        <video id="video8" class="video">
+                            <source src="./assets/image/video.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает тег video.
+                        </video>
+                        <p>Alisher G’aniyev8</p>
+                    </div>
+
                 </div>
-            </ul>
+            </div>
         </section>
         <!-- Сarousel End -->
 
@@ -1075,6 +1084,7 @@
 
     <!-- JS -->
     <script src="assets/js/index.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </body>
 

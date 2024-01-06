@@ -1694,27 +1694,32 @@ input:not(:placeholder-shown)+.placeholder {
     color: var(--black);
 }
 
-.carousel__list {
+.swiper-container {
     width: 100%;
     height: auto;
     background-color: var(--white);
     overflow: hidden;
+    display: flex;
+    padding: 20px 10px;
 }
 
-#carouselContainer {
+.swiper-wrapper {
     display: flex;
-    gap: 20px;
-    padding: 20px 10px;
     transition: transform 0.5s ease-in-out;
 }
 
+.swiper-slide,
 .carousel__list__item {
-    overflow: hidden;
     background-color: var(--gray);
+    border-radius: var(--border-radius);
     min-width: 268px;
     height: 426px;
-    border-radius: var(--border-radius);
     position: relative;
+}
+
+.video {
+    width: 100%;
+    height: 426px;
 }
 
 .carousel__list__item button {
@@ -1750,6 +1755,9 @@ input:not(:placeholder-shown)+.placeholder {
         margin: 20px 0;
     }
 }
+
+
+
 
 
 
