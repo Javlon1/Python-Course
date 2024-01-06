@@ -63,7 +63,7 @@ function mentorsModal(id) {
 document.addEventListener("DOMContentLoaded", function () {
     const carouselContainer = document.getElementById('carouselContainer');
     const items = document.querySelectorAll('.carousel__list__item');
-    const totalItems = items.length;
+    const totalItems = items.length; // Изменение на количество изначальных элементов
 
     let currentIndex = 1;
     let isMouseOverCarousel = false;
@@ -71,45 +71,28 @@ document.addEventListener("DOMContentLoaded", function () {
     let touchEndX = 0;
     let shouldContinueScrolling = true;
 
-    function initializeCarousel() {
-        for (let i = 0; i < totalItems; i++) {
-            const cloneItem = items[i].cloneNode(true);
-            const lazyVideo = cloneItem.querySelector('video');
-            lazyVideo.poster = './assets/image/process.png';
-            carouselContainer.appendChild(cloneItem);
-        }
+    function showSlide(index) {
+        const offset = -index * 288;
+        carouselContainer.style.transform = `translateX(${offset}px)`;
+    }
 
+    function initializeCarousel() {
         showSlide(currentIndex);
 
         setInterval(() => {
             if (!isMouseOverCarousel && shouldContinueScrolling) {
                 nextSlide();
             }
-        }, 5000);
-    }
-
-    function showSlide(index) {
-        const offset = -index * 288;
-        carouselContainer.style.transform = `translateX(${offset}px)`;
+        }, 4000);
     }
 
     function prevSlide() {
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = totalItems - 1;
-        }
-
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Изменение условия
         showSlide(currentIndex);
     }
 
     function nextSlide() {
-        if (currentIndex < totalItems * 2 - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = totalItems;
-        }
-
+        currentIndex = (currentIndex + 1) % totalItems; // Изменение условия
         showSlide(currentIndex);
     }
 
@@ -151,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
     carouselContainer.addEventListener('touchmove', handleTouchMove);
     carouselContainer.addEventListener('touchend', handleTouchEnd);
 });
+
 // 
 
 //
