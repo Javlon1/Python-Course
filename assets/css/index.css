@@ -1712,7 +1712,6 @@ input:not(:placeholder-shown)+.placeholder {
 .carousel__list__item {
     background-color: var(--gray);
     border-radius: var(--border-radius);
-    min-width: 268px;
     height: 426px;
     position: relative;
 }
