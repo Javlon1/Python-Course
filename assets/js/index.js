@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let i = 0; i < totalItems; i++) {
             const cloneItem = items[i].cloneNode(true);
             const lazyVideo = cloneItem.querySelector('video');
-            lazyVideo.poster = './assets/image/placeholder.jpg';
+            lazyVideo.poster = './assets/image/process.png';
             lazyVideo.src = './backend/video' + (i + 1) + '.mp4';
             carouselContainer.appendChild(cloneItem);
         }
