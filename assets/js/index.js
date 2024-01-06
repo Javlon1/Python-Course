@@ -65,8 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const items = document.querySelectorAll('.carousel__list__item');
     const totalItems = items.length;
 
-    let currentIndex = 1;
+    let currentIndex = 1; 
     let isMouseOverCarousel = false;
+    let touchStartX = 0;
+    let touchEndX = 0;
 
     function initializeCarousel() {
         for (let i = 0; i < totalItems; i++) {
@@ -80,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!isMouseOverCarousel) {
                 nextSlide();
             }
-        }, 3000);
+        }, 5000); 
     }
 
     function showSlide(index) {
@@ -108,8 +110,27 @@ document.addEventListener("DOMContentLoaded", function () {
         showSlide(currentIndex);
     }
 
-    initializeCarousel();
+    function handleTouchStart(event) {
+        touchStartX = event.touches[0].clientX;
+    }
 
+    function handleTouchMove(event) {
+        touchEndX = event.touches[0].clientX;
+    }
+
+    function handleTouchEnd() {
+        const touchDelta = touchEndX - touchStartX;
+
+        if (Math.abs(touchDelta) > 50) {
+            if (touchDelta > 0) {
+                prevSlide();
+            } else {
+                nextSlide();
+            }
+        }
+    }
+
+    initializeCarousel();
 
     carouselContainer.addEventListener('mouseenter', () => {
         isMouseOverCarousel = true;
@@ -119,15 +140,9 @@ document.addEventListener("DOMContentLoaded", function () {
         isMouseOverCarousel = false;
     });
 
-    carouselContainer.addEventListener('wheel', (event) => {
-        event.preventDefault();
-
-        if (event.deltaY > 0) {
-            nextSlide();
-        } else {
-            prevSlide();
-        }
-    });
+    carouselContainer.addEventListener('touchstart', handleTouchStart);
+    carouselContainer.addEventListener('touchmove', handleTouchMove);
+    carouselContainer.addEventListener('touchend', handleTouchEnd);
 });
 // 
 
