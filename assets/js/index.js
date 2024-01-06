@@ -76,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const cloneItem = items[i].cloneNode(true);
             const lazyVideo = cloneItem.querySelector('video');
             lazyVideo.poster = './assets/image/process.png';
-            lazyVideo.src = './backend/video' + (i + 1) + '.mp4';
             carouselContainer.appendChild(cloneItem);
         }
 
@@ -121,6 +120,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function handleTouchMove(event) {
         touchEndX = event.touches[0].clientX;
+        event.preventDefault();
+    }
+
+    function handleTouchEnd() {
+        const touchDelta = touchEndX - touchStartX;
+
+        if (Math.abs(touchDelta) > 50) {
+            if (touchDelta > 0) {
+                prevSlide();
+            } else {
+                nextSlide();
+            }
+        }
+
+        shouldContinueScrolling = true;
     }
 
     initializeCarousel();
@@ -135,6 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     carouselContainer.addEventListener('touchstart', handleTouchStart);
     carouselContainer.addEventListener('touchmove', handleTouchMove);
+    carouselContainer.addEventListener('touchend', handleTouchEnd);
 });
 // 
 
