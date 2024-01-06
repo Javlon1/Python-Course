@@ -65,10 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const items = document.querySelectorAll('.carousel__list__item');
     const totalItems = items.length;
 
-    let currentIndex = 1; 
+    let currentIndex = 1;
     let isMouseOverCarousel = false;
     let touchStartX = 0;
     let touchEndX = 0;
+    let shouldContinueScrolling = true;
 
     function initializeCarousel() {
         for (let i = 0; i < totalItems; i++) {
@@ -79,10 +80,10 @@ document.addEventListener("DOMContentLoaded", function () {
         showSlide(currentIndex);
 
         setInterval(() => {
-            if (!isMouseOverCarousel) {
+            if (!isMouseOverCarousel && shouldContinueScrolling) {
                 nextSlide();
             }
-        }, 5000); 
+        }, 5000);
     }
 
     function showSlide(index) {
@@ -112,6 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function handleTouchStart(event) {
         touchStartX = event.touches[0].clientX;
+        shouldContinueScrolling = false;
     }
 
     function handleTouchMove(event) {
@@ -128,6 +130,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 nextSlide();
             }
         }
+
+        shouldContinueScrolling = true;
     }
 
     initializeCarousel();
