@@ -70,22 +70,18 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         breakpoints: {
             320: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-            },
-            400: {
                 slidesPerView: 2,
                 spaceBetween: 20,
             },
-            750: {
+            580: {
                 slidesPerView: 3,
                 spaceBetween: 20,
             },
-            1000: {
+            860: {
                 slidesPerView: 4,
                 spaceBetween: 20,
             },
-            1300: {
+            1150: {
                 slidesPerView: 5,
                 spaceBetween: 20,
             },
