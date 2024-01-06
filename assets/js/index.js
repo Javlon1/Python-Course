@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
 function playPause(videoId) {
     var video = document.getElementById(videoId);
 
@@ -117,9 +118,6 @@ function playPause(videoId) {
         console.error("Элемент с id '" + videoId + "' не найден");
     }
 }
-
-
-
 // slider end
 
 

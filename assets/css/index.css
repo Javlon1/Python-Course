@@ -1220,7 +1220,8 @@ input {
 
 input:focus+.placeholder,
 input:not(:placeholder-shown)+.placeholder {
-    transform: translateY(-180%);
+    transform: translateY(-150%);
+    margin-top: -12px;
     font-size: 12px;
     color: #777;
 }
@@ -1792,20 +1793,112 @@ input:not(:placeholder-shown)+.placeholder {
         width: 280px;
     }
 }
+
 @media only screen and (max-width: 991px) {
+    .overview__title {
+        margin: 40px 0;
+        width: 90%;
+    }
+
     .overview__list__item {
         width: 48%;
     }
 }
 
 @media only screen and (max-width: 575px) {
+    .overview__title {
+        margin: 40px 0;
+        width: 90%;
+    }
+
     .overview__list__item {
         width: 100%;
     }
 }
 
+.switch {
+    margin: 40px 0;
+}
 
+.switch__items {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
 
+.switch__items__left {
+    width: 50%;
+    padding: var(--padding);
+    background: radial-gradient(var(--green), #122e3c);
+    border-radius: var(--border-radius);
+}
+
+.switch__items__left h3 {
+    color: var(--white);
+    font-size: var(--font-size-content-title);
+}
+
+.switch__items__right {
+    width: 30%;
+    height: 444px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: var(--padding);
+    background-color: var(--white);
+}
+
+.switch__items__right h3 {
+    font-size: 27px;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.switch__items__right form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.switch__items__right form button {
+    width: 100%;
+    border-radius: 1rem;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 1rem;
+    color: var(--white);
+    background-color: var(--black);
+}
+
+@media only screen and (max-width: 991px) {
+    .switch__items {
+        flex-direction: column;
+    }
+
+    .switch__items__left {
+        width: 100%;
+    }
+
+    .switch__items__right {
+        order: -1;
+        width: 376px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .switch__items__left {
+        width: 100%;
+    }
+
+    .switch__items__right {
+        width: 100%;
+    }
+}
 
 .faq .faq__title {
     text-align: center;
