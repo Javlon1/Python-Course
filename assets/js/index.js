@@ -63,7 +63,7 @@ function mentorsModal(id) {
 document.addEventListener("DOMContentLoaded", function () {
     const carouselContainer = document.getElementById('carouselContainer');
     const items = document.querySelectorAll('.carousel__list__item');
-    const totalItems = items.length; // Изменение на количество изначальных элементов
+    const totalItems = items.length;
 
     let currentIndex = 1;
     let isMouseOverCarousel = false;
@@ -83,16 +83,16 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!isMouseOverCarousel && shouldContinueScrolling) {
                 nextSlide();
             }
-        }, 4000);
+        }, 6000);
     }
 
     function prevSlide() {
-        currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Изменение условия
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
         showSlide(currentIndex);
     }
 
     function nextSlide() {
-        currentIndex = (currentIndex + 1) % totalItems; // Изменение условия
+        currentIndex = (currentIndex + 1) % totalItems;
         showSlide(currentIndex);
     }
 
@@ -103,10 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function handleTouchMove(event) {
         touchEndX = event.touches[0].clientX;
-        event.preventDefault();
-    }
-
-    function handleTouchEnd() {
         const touchDelta = touchEndX - touchStartX;
 
         if (Math.abs(touchDelta) > 50) {
@@ -115,6 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 nextSlide();
             }
+            event.preventDefault();
         }
 
         shouldContinueScrolling = true;
@@ -132,7 +129,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     carouselContainer.addEventListener('touchstart', handleTouchStart);
     carouselContainer.addEventListener('touchmove', handleTouchMove);
-    carouselContainer.addEventListener('touchend', handleTouchEnd);
 });
 
 // 
