@@ -1697,10 +1697,14 @@ input:not(:placeholder-shown)+.placeholder {
     width: 100%;
     height: auto;
     background-color: var(--white);
-    padding: 20px 10px;
+    overflow: hidden;
+}
+
+#carouselContainer {
     display: flex;
     gap: 20px;
-    overflow: hidden;
+    padding: 20px 10px;
+    transition: transform 0.5s ease-in-out;
 }
 
 .carousel__list__item {
@@ -1716,8 +1720,8 @@ input:not(:placeholder-shown)+.placeholder {
     position: absolute;
     top: 1rem;
     left: 1rem;
-    width: 32px;
-    height: 32px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     z-index: 2;
     background-color: var(--white);
