@@ -110,12 +110,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     initializeCarousel();
 
+
     carouselContainer.addEventListener('mouseenter', () => {
         isMouseOverCarousel = true;
     });
 
     carouselContainer.addEventListener('mouseleave', () => {
         isMouseOverCarousel = false;
+    });
+
+    carouselContainer.addEventListener('wheel', (event) => {
+        event.preventDefault();
+
+        if (event.deltaY > 0) {
+            nextSlide();
+        } else {
+            prevSlide();
+        }
     });
 });
 // 
