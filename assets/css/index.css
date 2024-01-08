@@ -207,6 +207,11 @@ img {
     margin-top: 100px;
 }
 
+.intro h1 {
+    opacity: 0;
+    color: transparent;
+}
+
 .intro .intro__items {
     display: flex;
     align-items: center;
