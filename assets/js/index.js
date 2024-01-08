@@ -119,7 +119,25 @@ function playPause(videoId) {
     }
 }
 // slider end
+//
 
+let checked = true;
+
+function handleToggle() {
+    checked = !checked;
+    updateDisplay();
+}
+
+function updateDisplay() {
+    const silverSpan = document.getElementById('silverSpan');
+    const goldSpan = document.getElementById('goldSpan');
+    const checkbox = document.querySelector('.switch__items__left__checkbox');
+
+    checkbox.checked = checked;
+    silverSpan.classList.toggle(checked);
+    goldSpan.classList.toggle(!checked);
+}
+//
 
 // Faq Start
 function toggleAnswer(id) {
