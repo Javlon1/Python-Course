@@ -1903,7 +1903,7 @@ input:not(:placeholder-shown)+.placeholder {
 
 .switch__items__left__price {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 30px;
 }
 
