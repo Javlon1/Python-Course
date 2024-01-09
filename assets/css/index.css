@@ -28,7 +28,7 @@
         --padding: 16px;
         --font-size-title: 24px;
         --font-size-content-title: 18px;
-        --font-size-subtitle: 16px;
+        --font-size-subtitle: 17px;
     }
 }
 
@@ -574,8 +574,8 @@ img {
 
 @media only screen and (max-width: 991px) {
     .experience h2 {
-        margin: 25px 0;
-    }
+        margin: 35px 0 20px;
+    } 
 
     .experience__items {
         flex-direction: column;
@@ -592,7 +592,7 @@ img {
 
 @media only screen and (max-width: 575px) {
     .experience h2 {
-        margin: 20px 0;
+        margin: 30px 0 10px;
     }
 
     .experience__items__right .list1 li {
@@ -714,7 +714,7 @@ img {
 
 @media only screen and (max-width: 991px) {
     .learn .learn__title {
-        margin: 25px 0;
+        margin: 35px 0 20px;
     }
 
     .learn__list__item p {
@@ -734,7 +734,7 @@ img {
 
 @media only screen and (max-width: 575px) {
     .learn .learn__title {
-        margin: 20px 0;
+        margin: 30px 0 10px;
     }
 
     .learn__imgs {
@@ -838,7 +838,7 @@ img {
 
 @media only screen and (max-width: 991px) {
     .process .process__title {
-        margin: 25px 0;
+        margin: 35px 0 20px;
     }
 
     .process .process__list {
@@ -868,7 +868,7 @@ img {
 
 @media only screen and (max-width: 575px) {
     .process .process__title {
-        margin: 20px 0;
+        margin: 30px 0 10px;
     }
 
     .process .process__list {
@@ -924,7 +924,7 @@ img {
 
 @media only screen and (max-width: 991px) {
     .suitable__title {
-        margin: 25px 0;
+        margin: 35px 0 20px;
     }
 
     .suitable__list {
@@ -944,7 +944,7 @@ img {
 
 @media only screen and (max-width: 575px) {
     .suitable__title {
-        margin: 20px 0;
+        margin: 30px 0 10px;
     }
 }
 
@@ -989,7 +989,7 @@ img {
 
 @media only screen and (max-width: 991px) {
     .portfolio__title {
-        margin: 25px 0;
+        margin: 35px 0 20px;
     }
 
     .portfolio__list {
@@ -1015,7 +1015,7 @@ img {
 
 @media only screen and (max-width: 575px) {
     .portfolio__title {
-        margin: 20px 0;
+        margin: 30px 0 10px;
     }
 }
 
@@ -1653,7 +1653,7 @@ input:not(:placeholder-shown)+.placeholder {
     }
 
     .mentors__title {
-        margin: 25px 0;
+        margin: 35px 0 20px;
     }
 
     .mentors__items {
@@ -1685,7 +1685,7 @@ input:not(:placeholder-shown)+.placeholder {
 
 @media only screen and (max-width: 575px) {
     .mentors__title {
-        margin: 20px 0;
+        margin: 30px 0 10px;
     }
 
     .mentors__items__left {
@@ -1750,13 +1750,13 @@ input:not(:placeholder-shown)+.placeholder {
 
 @media only screen and (max-width: 991px) {
     .carousel__title {
-        margin: 25px 0;
+        margin: 35px 0 20px;
     }
 }
 
 @media only screen and (max-width: 575px) {
     .carousel__title {
-        margin: 20px 0;
+        margin: 30px 0 10px;
     }
 }
 
@@ -1801,7 +1801,7 @@ input:not(:placeholder-shown)+.placeholder {
 
 @media only screen and (max-width: 991px) {
     .overview__title {
-        margin: 40px 0;
+        margin: 35px 0 20px;
         width: 90%;
     }
 
@@ -1812,7 +1812,7 @@ input:not(:placeholder-shown)+.placeholder {
 
 @media only screen and (max-width: 575px) {
     .overview__title {
-        margin: 40px 0;
+        margin: 30px 0 10px;
         width: 90%;
     }
 
@@ -2156,7 +2156,7 @@ input:not(:placeholder-shown)+.placeholder {
 
 @media only screen and (max-width: 575px) {
     .faq .faq__title {
-        margin: 25px 0;
+        margin: 35px 0 10px;
     }
 }
 
