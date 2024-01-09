@@ -119,9 +119,11 @@ function playPause(videoId) {
     }
 }
 // slider end
-//
 
+// switch start
 let checked = true;
+const silverAct = document.querySelector(".silver")
+const goldAct = document.querySelector(".gold")
 
 function handleToggle() {
     checked = !checked;
@@ -136,8 +138,16 @@ function updateDisplay() {
     checkbox.checked = checked;
     silverSpan.classList.toggle(checked);
     goldSpan.classList.toggle(!checked);
+
+    if (!checked) {
+        silverAct.classList.add("switchAct");
+        goldAct.classList.remove("switchAct");
+    } else {
+        silverAct.classList.remove("switchAct");
+        goldAct.classList.add("switchAct");
+    }
 }
-//
+// switch end
 
 // Faq Start
 function toggleAnswer(id) {
