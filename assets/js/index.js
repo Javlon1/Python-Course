@@ -63,10 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var swiperInstance = new Swiper('.swiper-container', {
         slidesPerView: 1,
         spaceBetween: 10,
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
-        },
+        loop: true,
         breakpoints: {
             320: {
                 slidesPerView: 1,
@@ -97,27 +94,48 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function playPause(videoId) {
-    var video = document.getElementById(videoId);
+    const video = document.getElementById(videoId);
 
     if (video) {
         var allVideos = document.getElementsByTagName('video');
         for (var i = 0; i < allVideos.length; i++) {
             if (allVideos[i] !== video && !allVideos[i].paused) {
                 allVideos[i].pause();
+                const playButton = document.getElementById('play' + allVideos[i].id.substring(5));
+                if (playButton) {
+                    playButton.style.display = "inline"; // Показать кнопку play
+                }
+                const pauseButton = document.getElementById('pause' + allVideos[i].id.substring(5));
+                if (pauseButton) {
+                    pauseButton.style.display = "none"; // Скрыть кнопку pause
+                }
             }
         }
 
+        const playButton = document.getElementById('play' + videoId.substring(5));
+        const pauseButton = document.getElementById('pause' + videoId.substring(5));
+
         if (video.paused) {
             video.play();
-            // swiperInstance.autoplay.stop();
+            if (playButton && pauseButton) {
+                playButton.style.display = "none"; // Скрыть кнопку play
+                pauseButton.style.display = "inline"; // Показать кнопку pause
+            }
         } else {
             video.pause();
-            // swiperInstance.autoplay.start();
+            if (playButton && pauseButton) {
+                playButton.style.display = "inline"; // Показать кнопку play
+                pauseButton.style.display = "none"; // Скрыть кнопку pause
+            }
         }
     } else {
         console.error("Элемент с id '" + videoId + "' не найден");
     }
 }
+
+
+
+
 // slider end
 
 // switch start

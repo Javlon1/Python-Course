@@ -1726,8 +1726,13 @@ input:not(:placeholder-shown)+.placeholder {
     height: 400px;
 }
 
-.carousel__list__item button {
-    position: absolute;
+.carousel__list__item div {
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 1rem;
     left: 1rem;
     width: 35px;
@@ -1735,6 +1740,17 @@ input:not(:placeholder-shown)+.placeholder {
     border-radius: 50%;
     z-index: 2;
     background-color: var(--white);
+}
+
+
+.carousel__list__item div b {
+    display: none;
+    font-weight: 900;
+}
+
+.pauseAct {
+    display: block !important;
+    opacity: 1 !important;
 }
 
 .carousel__list__item p {
