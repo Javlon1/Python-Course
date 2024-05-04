@@ -60,9 +60,10 @@ function mentorsModal(id) {
 
 // slider start
 document.addEventListener('DOMContentLoaded', function () {
+    // Инициализация первой карусели
     var swiper1 = new Swiper('.carousel1', {
         slidesPerView: 1,
-        spaceBetween: 10,
+        spaceBetween: 20,
         loop: true,
         breakpoints: {
             320: {
@@ -92,34 +93,35 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Инициализация второй карусели
     var swiper2 = new Swiper('.carousel2', {
         slidesPerView: 1,
-        spaceBetween: 10,
+        spaceBetween: 30,
         loop: true,
         breakpoints: {
             320: {
                 slidesPerView: 1,
-                spaceBetween: 20,
+                spaceBetween: 0,
             },
             400: {
                 slidesPerView: 1,
-                spaceBetween: 20,
+                spaceBetween: 0,
             },
             860: {
                 slidesPerView: 3,
-                spaceBetween: 20,
+                spaceBetween: 0,
             },
             1150: {
                 slidesPerView: 4,
-                spaceBetween: 20,
+                spaceBetween: 0,
             },
             1350: {
                 slidesPerView: 5,
-                spaceBetween: 20,
+                spaceBetween: 0,
             },
             1400: {
                 slidesPerView: 7,
-                spaceBetween: 20,
+                spaceBetween: 0,
             },
         }
     });

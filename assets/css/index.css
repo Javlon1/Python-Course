@@ -1774,6 +1774,15 @@ input:not(:placeholder-shown)+.placeholder {
     border-radius: var(--border-radius);
 }
 
+.carousel__list__item2{
+    background-color: var(--white);
+}
+
+.carousel__list__item2 iframe {
+    width: 90%;
+    height: 450px;  
+}
+
 @media only screen and (max-width: 991px) {
     .carousel__title {
         margin: 35px 0 20px;
