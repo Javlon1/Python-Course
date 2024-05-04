@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Инициализация второй карусели
     var swiper2 = new Swiper('.carousel2', {
         slidesPerView: 1,
-        spaceBetween: 30,
+        spaceBetween: 20,
         loop: true,
         breakpoints: {
             320: {

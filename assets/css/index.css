@@ -1775,11 +1775,13 @@ input:not(:placeholder-shown)+.placeholder {
 }
 
 .carousel__list__item2{
+    display: flex;
+    justify-content: center;
     background-color: var(--white);
 }
 
 .carousel__list__item2 iframe {
-    width: 90%;
+    width: 95%;
     height: 450px;  
 }
 
