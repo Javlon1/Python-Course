@@ -60,7 +60,39 @@ function mentorsModal(id) {
 
 // slider start
 document.addEventListener('DOMContentLoaded', function () {
-    var swiperInstance = new Swiper('.swiper-container', {
+    var swiper1 = new Swiper('.carousel1', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            400: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            860: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1150: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+            1350: {
+                slidesPerView: 5,
+                spaceBetween: 20,
+            },
+            1400: {
+                slidesPerView: 7,
+                spaceBetween: 20,
+            },
+        }
+    });
+
+    var swiper2 = new Swiper('.carousel2', {
         slidesPerView: 1,
         spaceBetween: 10,
         loop: true,
